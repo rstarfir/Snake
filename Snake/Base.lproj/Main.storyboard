@@ -15,26 +15,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Px-Dr-5V0">
-                                <rect key="frame" x="112.5" y="507" width="150" height="55"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Px-Dr-5V0">
+                                <rect key="frame" x="112.5" y="420.5" width="150" height="141"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="142" id="04p-1W-PGa"/>
                                     <constraint firstAttribute="width" constant="150" id="5IC-Qb-jKu"/>
-                                    <constraint firstAttribute="height" constant="55" id="N0z-aq-by4"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="32"/>
-                                <state key="normal" title="PLAY">
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="PLAY" backgroundImage="circle.fill" catalog="system">
                                     <color key="titleColor" red="1" green="0.11534101440349753" blue="0.24634913985504148" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                 </state>
                                 <connections>
                                     <segue destination="HHo-BJ-hCc" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="oQ1-Xg-2n2"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="nNU-uI-jsB">
+                                <rect key="frame" x="194" y="20.5" width="150" height="187"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hak-ih-32v">
+                                <rect key="frame" x="258" y="-49.5" width="150" height="187"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="c1K-cq-rCX">
+                                <rect key="frame" x="58" y="178.5" width="150" height="187"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="1" green="0.1153410144" blue="0.24634913990000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.11540212608369571" green="0.11357452124723899" blue="0.12182081154155244" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="hSM-XZ-YWi" firstAttribute="bottom" secondItem="3Px-Dr-5V0" secondAttribute="bottom" constant="105" id="Dlg-6C-1aY"/>
-                            <constraint firstItem="hSM-XZ-YWi" firstAttribute="trailing" secondItem="3Px-Dr-5V0" secondAttribute="trailing" constant="112.5" id="R1r-Fq-pRk"/>
                             <constraint firstItem="3Px-Dr-5V0" firstAttribute="leading" secondItem="hSM-XZ-YWi" secondAttribute="leading" constant="112.5" id="lo5-Vg-kph"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hSM-XZ-YWi"/>
@@ -47,6 +65,7 @@
         <!--Game View Controller-->
         <scene sceneID="Z3K-qS-hLQ">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pA7-Ug-9nT" sceneMemberID="firstResponder"/>
                 <viewController id="HHo-BJ-hCc" customClass="GameViewController" customModule="Snake" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="b5c-iD-RuC" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -71,7 +90,6 @@
                         <viewLayoutGuide key="safeArea" id="ZPQ-Ji-JKD"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pA7-Ug-9nT" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="95" y="137"/>
         </scene>
@@ -109,4 +127,7 @@
             <point key="canvasLocation" x="896.79999999999995" y="131.78410794602701"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="circle.fill" catalog="system" width="128" height="121"/>
+    </resources>
 </document>
